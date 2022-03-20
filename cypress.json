@@ -1,0 +1,29 @@
+{
+  "baseUrl": "https://www.phptravels.net",
+  "defaultCommandTimeout": 2000,
+  "slowCommandTimeout": 2000,
+  "chromeWebSecurity": false,
+  "updateState": 2000,
+  "updateTimeout": 2000,
+  "waitForPageToLoadSafeTimeout": 2000,
+  "requestTimeout": 2000,
+  "visualRegressionTimeout": 2000,
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/reporter/screenshots",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+   },
+   "mochawesomeReporterOptions": {
+    "reportDir": "cypress/results/json",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+   "env": {
+    "USER_EMAIL": "user@phptravels.com",
+    "USER_PASSWORD": "demouser"
+  },
+  "numTestsKeptInMemory": 2,
+  "retries": 2
+}

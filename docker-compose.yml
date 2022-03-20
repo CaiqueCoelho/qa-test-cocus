@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  e2e:
+    # the Docker image to use from https://github.com/cypress-io/cypress-docker-images
+    image: cypress
+    build: ./
+    container_name: cypress
+    environment:
+      - CYPRESS_baseUrl=https://www.phptravels.net
+    command: npx cypress run --reporter mochawesome
+    volumes:
+      - ./cypress:/app/cypress
+      - ./cypress.json:/app/cypress.json
