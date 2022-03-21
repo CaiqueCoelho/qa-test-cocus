@@ -1,27 +1,40 @@
 import LoginPage from '../../support/Pages/LoginPage/LoginPage';
-import { H3_TEXT, FEEDBACK_ERROR_TEXT } from '../../support/Pages/LoginPage/constants'
+import HomePage from '../../support/Pages/HomePage/HomePage';
 
-describe('Desktop Viewport - Homepage', () => {
+describe('Desktop Viewport - Login', () => {
   let page;
 
-  before(() => {
+  Cypress.config('scrollBehavior', false);
+
+  beforeEach(() => {
     page = new LoginPage();
     page.visit();
   })
 
-  it.only('Do login', () => {
+  it('Do login', () => {
     cy.checkAccessibility(true);
+    page.getCookieButton().click();
     page.getEmailInput().type(Cypress.env('USER_EMAIL'));
     page.getPasswordInput().type(Cypress.env('USER_PASSWORD'));
     page.getLoginButton().click();
+
+    page = new HomePage();
+    page.getWelcomeBackMessage().should('exist')
   });
 
-  it.only('Try to log in with invalid user', () => {
+  it('Try to log in with invalid user', () => {
     page.getEmailInput().type("user@phptravels.com");
     page.getPasswordInput().type("demo");
-    page.getLoginButton();
+    page.getLoginButton().click();
 
-    page.getFeedbackError().should('exists');
+    page.getFeedbackErrorInavalidCredential().should('exist');
+    cy.checkAccessibility(true);
+  });
+
+  it('Try to log in with empty e-mail', () => {
+    page.getLoginButton().click();
+
+    page.checkIfEmailIsFocused();
     cy.checkAccessibility(true);
   });
 });

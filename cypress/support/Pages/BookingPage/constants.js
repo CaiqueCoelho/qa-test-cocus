@@ -1,0 +1,1 @@
+export const BANK_TRANSFER_ID = 'gateway_bank-transfer'

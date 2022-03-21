@@ -1,0 +1,1 @@
+export const WELCOME_BACK_MESSAGE_BY_TEXT = 'Welcome Back'

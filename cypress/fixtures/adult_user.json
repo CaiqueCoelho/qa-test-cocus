@@ -1,0 +1,17 @@
+{
+  "first_name": "Demo",
+  "last_name": "User",
+  "email": "user@phptravels.com",
+  "nationality": "Afghanistan",
+  "nationality_ab": "AF",
+  "day_of_birth": "15",
+  "month_of_birth": "02 February",
+  "year_of_birth": "1996",
+  "doc_number": "54654511211313",
+  "passport_issuance_month": "02 February",
+  "passport_issuance_day": "15",
+  "passport_issuance_year": "2022",
+  "passport_expiry_month": "02 February",
+  "passport_expiry_day": "15",
+  "passport_expiry_year": "2025"
+}

@@ -1,0 +1,13 @@
+export const FLY_FROM_INPUT_BY_ID = '#autocomplete';
+export const FLY_TO_BY_INPUT_ID = '#autocomplete2';
+export const FLY_OPTIONS_BY_CLASS = '[data-index="0"]';
+export const FLY_DEPARTURE_DATE_INPUT_BY_ID = '#departure';
+export const FLY_RETURN_DATE_INPUT_BY_ID = '#return';
+export const SEARCH_BUTTON_BY_ID = '#flights-search';
+export const BOOK_NOW_BUTTON_BY_TYPE = '[type="submit"]';
+export const AIRPORT_NAME_BY_CLASS = '.theme-search-results-item-flight-section-meta-city';
+export const PASSENGERS_COUNT_BY_CLASS = '.dropdown-toggle';
+export const PASSENGERS_COUNT_PLUS_BY_CLASS = '.la-plus';
+export const PASSENGERS_COUNT_MINUS_BY_CLASS = '.la-minus';
+export const LOAD_BY_CLASS = '.waves-ripple';
+export const ROUND_TRIP_CHECKBOX_BY_FOR = '[for="round-trip"]'
