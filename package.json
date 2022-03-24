@@ -10,7 +10,11 @@
     "up": "docker-compose up --abort-on-container-exit --exit-code-from e2e",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
-    "test:chrome": "cypress run --browser chrome"
+    "test:chrome": "cypress run --browser chrome",
+    "test:electron": "cypress run --browser electron",
+    "test:Flights": "cypress run --config pageLoadTimeout=60000,retries=3 --spec 'cypress/integration/Flights/Flights.test.js'",
+    "test:Login": "cypress run --config pageLoadTimeout=60000,retries=3 --spec 'cypress/integration/Login/Login.test.js'",
+    "test:LoginMobile": "cypress run --config pageLoadTimeout=60000,retries=3 --spec 'cypress/integration/Login/LoginMobile.test.js'"
   },
   "keywords": [
     "cocus",
