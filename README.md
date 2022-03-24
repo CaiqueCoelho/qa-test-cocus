@@ -14,7 +14,7 @@ To facilitate the organization and follow good clean code practices, I chose to 
 Defining a parent base page (BasePage) with features that can be reused by all inherited child pages, for example by the HomePage page.
 On the parent page I implemented the location of elements such options in header.
 In addition to the Page Objects pages that are responsible for abstracting the locations of the elements, I separated the path to the elements in the pages in another file in order to make the Page Object cleaner and centralize constants in other files.
-For the location of the elements I mostly used the ids of the elements whenever possible and in the absence of ids I used XPATH.
+For the location of the elements I mostly used the ids of the elements whenever possible and in the absence of ids I used elements attributes and class.
 
 <img src="https://github.com/CaiqueCoelho/qa-test-cocus/blob/main/qa-test-cocus.drawio.png" width="900px">
 
@@ -23,6 +23,18 @@ For the location of the elements I mostly used the ids of the elements whenever 
 For the validation of the flows, the automations were written in a separate file just for the tests (Contact.test.js). To organize the executions, I used Mocha's describe and it to separate the information and provide documentation of what is being executed and what should be expected.
 For assertions I used should from Chai.
 In addition to the simple flow assertions, possible accessibility issues with AXE were also validated.
+
+###### 1.3.1 Failed Tests Cases
+When running exploratory tests and writing automated tests some bugs were identified for which I wrote automated tests that reproduce the error, so these tests have a status of failure
+
+The tests are:
+1. Search Booking Without Departure Date
+2. Search Booking Without People
+3. Try to book a flight without travelers detail
+
+The first one the page just crash but should instead show a feedback error and focus in the departure date input. 
+The second test the page is showing booking options for 0 USD but should instead show a feedback error and focus in the people count input. 
+And the third one user are getting a invoice and a booking witout travelers details like traveler name, but should instead show a feedback error and block the user from going with the flow without the travelers data
 
 ###### 1.4 Responsiveness
 To validate the site's responsiveness, tests were performed in the viewport for both desktop and smartphones such as iPhone 6, Samsumg S10, iPhone 6 horizontally (landscape) and iPad2.
@@ -42,7 +54,11 @@ Or you you can use Docker:
 2. `npm run up`
 
 ###### 1.6 Accessibility bugs
-1.
+1. In login page the cookie alert dialog doesn't have a accesible name, so screen readers can't describe what this alert is about
+2. In login page the cookie alert dialog doesn't have a good color contrast so people with low vision may have trouble reading
+3. In login page the icons for Facebook, Twitter, Youtube, Whatsapp, Google Maps and Instagram doesn't have a discernible test, so screen readers can't describe what this alert is about
+4. In login, page doesn't contain a level-one heading, so will be hard when the user with a screen reader are navigate between pages, because he won't have an initial rundown on which page he's on
+5. In login page exist `http-equiv="refresh"` attribute, and this can be a problem because this attribute makes the refresh automatically so focus go back to the top of the page after a refresh
 
 ##### 1.7 Parallel Test and Cross Browser
 For this test I implemented the Github Action (GHA) creating 5 workflows that will run in Github in parallel in each push trigger:

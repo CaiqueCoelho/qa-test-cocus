@@ -6,7 +6,7 @@ const sizes = ['iphone-6', 'samsung-s10', 'iphone-6-landscape', 'ipad-2']
 describe('Desktop Viewport - Login', () => {
     let page;
   
-    // Cypress.config('scrollBehavior', false);
+    Cypress.config('scrollBehavior', "center");
   
     beforeEach(() => {
       page = new LoginPage();
@@ -15,7 +15,17 @@ describe('Desktop Viewport - Login', () => {
   
     sizes.forEach((size) => {
         it(`Do login with size ${size} screen`, function() {
-        cy.checkAccessibility(true);
+
+        if (Cypress._.isArray(size)) {
+            cy.viewport(size[0], size[1])
+        } else {
+            if(size != 'iphone-6-landscape') {
+              cy.viewport(size)
+            } else {
+              cy.viewport('iphone-6', 'landscape')
+            }
+        }
+
         page.getCookieButton().click();
         page.getEmailInput().type(Cypress.env('USER_EMAIL'));
         page.getPasswordInput().type(Cypress.env('USER_PASSWORD'));

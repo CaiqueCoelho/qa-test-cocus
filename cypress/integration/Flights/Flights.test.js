@@ -15,16 +15,13 @@ import InvoicePage from '../../support/Pages/InvoicePage/InvoicePage';
 describe('Desktop Viewport - Flights', () => {
   let page;
 
-  before(() => {
+  beforeEach( function() {
     page = new LoginPage();
     page.visit();
     page.getCookieButton().click({scrollBehavior:false});
     page.getEmailInput().type(Cypress.env('USER_EMAIL'), {scrollBehavior:false});
     page.getPasswordInput().type(Cypress.env('USER_PASSWORD'), {scrollBehavior:false});
     page.getLoginButton().click({scrollBehavior:false});
-  })
-
-  beforeEach( function() {
     page = new FlightPage();
     page.visit();
 
@@ -47,6 +44,7 @@ describe('Desktop Viewport - Flights', () => {
     Cypress.config('scrollBehavior', 'center')
 
     page = new BookingPage();
+    cy.checkAccessibility(true);
     page.getFirstNameInput().type(this.user.first_name, {scrollBehavior:'center'});
     page.getLastNameInput().type(this.user.last_name);
     page.getNationalityInput().select(this.user.nationality);
@@ -65,7 +63,7 @@ describe('Desktop Viewport - Flights', () => {
     page.getConfirmBookingButton().click();
 
     page = new InvoicePage();
-
+    cy.checkAccessibility(true);
     page.getTitlePage().should('be.visible')
     page.getReservationNumberTitle().should('be.visible')
     page.getFeedbackTitle().should('be.visible')
@@ -182,13 +180,11 @@ describe('Desktop Viewport - Flights', () => {
     page.getCountPassengers().click({scrollBehavior:false});
     page.getMinusAdult().click({scrollBehavior:false});
     page.getSearchButton().click({scrollBehavior:false});
-    page.getLoadIcon().should('be.visible');
-    page.getLoadIcon().should('not.be.visible');
     cy.contains(SEARCH_FLIGHT_TEXT).should('be.visible');
-    cy.focused().should('have.attr', 'data-toggle', 'dropdown')
+    page.getBookNowButton().should('not.exist')
   });
 
-  it('Try to book a flight without travelers detail', function() {
+  it.only('Try to book a flight without travelers detail', function() {
     page.getFlyFromInput().type(CITY_FROM, {scrollBehavior:false});
     page.getFlyOption().click({scrollBehavior:false});
     page.getFlyToInput().type(CITY_TO, {scrollBehavior:false})

@@ -6,7 +6,7 @@
   "updateState": 2000,
   "updateTimeout": 2000,
   "waitForPageToLoadSafeTimeout": 2000,
-  "pageLoadTimeout": 20000,
+  "pageLoadTimeout": 60000,
   "requestTimeout": 2000,
   "visualRegressionTimeout": 2000,
   "screenshotOnRunFailure": true,
@@ -25,5 +25,6 @@
     "USER_EMAIL": "user@phptravels.com",
     "USER_PASSWORD": "demouser"
   },
-  "retries": 0
+  "retries": 2,
+  "numTestsKeptInMemory": 2
 }
