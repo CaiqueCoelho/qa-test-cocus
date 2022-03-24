@@ -78,5 +78,4 @@ Regarding cross browser testing, Cypress is compatible with Chrome, Firefox and 
 You can check all GHA workflows jobs running [here](https://github.com/CaiqueCoelho/qa-test-cocus/actions) 
 
 ### TODO
-PAGE OBJECTS DRAW IO
 ATUALIZAR README EXPLICANDO PQ ESCOLHI CYPRESS E ATUALIZAR LINKS DOS VIDEOS E REPORTS E IMAGENS
