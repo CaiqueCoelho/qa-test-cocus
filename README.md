@@ -59,6 +59,11 @@ Or you you can use Docker:
 3. In login page the icons for Facebook, Twitter, Youtube, Whatsapp, Google Maps and Instagram doesn't have a discernible test, so screen readers can't describe what this alert is about
 4. In login, page doesn't contain a level-one heading, so will be hard when the user with a screen reader are navigate between pages, because he won't have an initial rundown on which page he's on
 5. In login page exist `http-equiv="refresh"` attribute, and this can be a problem because this attribute makes the refresh automatically so focus go back to the top of the page after a refresh
+6. Heading levels should only increase by one: In flights page the in Top Flight Destinations section the airlines names are using title `<h6>`, but is important to increase header by one from `<h1>`to other titles like `<h2>`, `<h3>` and so on.
+7. Ids must be unique: In flights page the departure date input doesn't have a unique id for example
+8. In flights page the type of flight dropdown doesn't have an accessible name
+9. In flights traveler information page some texts like Terms and Condition, Airline name and flight number doesn't have a good color contrast so people with low vision may have trouble reading
+10. In flights traveler information page the nationality dropdown input in Your Personal Information section doesn't have an accessible name
 
 ##### 1.7 Parallel Test and Cross Browser
 For this test I implemented the Github Action (GHA) creating 5 workflows that will run in Github in parallel in each push trigger:
@@ -73,7 +78,5 @@ Regarding cross browser testing, Cypress is compatible with Chrome, Firefox and 
 You can check all GHA workflows jobs running [here](https://github.com/CaiqueCoelho/qa-test-cocus/actions) 
 
 ### TODO
-DESCRIBE ACCESIBILITY BUGS
-DESCRIBE FAILED TEST CASES
 PAGE OBJECTS DRAW IO
 ATUALIZAR README EXPLICANDO PQ ESCOLHI CYPRESS E ATUALIZAR LINKS DOS VIDEOS E REPORTS E IMAGENS
