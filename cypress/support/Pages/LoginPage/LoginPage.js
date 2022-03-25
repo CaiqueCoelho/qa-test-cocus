@@ -9,7 +9,7 @@ import BasePage from '../BasePage/BasePage';
   
 export default class LoginPage extends BasePage {
 
-    visit = () => cy.visit('/login')
+    visit = () => cy.visit('/login', { failOnStatusCode: false, retryOnStatusCodeFailure: true, })
 
     getEmailInput = () => cy.get(EMAIL_INPUT_BY_TYPE).eq(0);
 
