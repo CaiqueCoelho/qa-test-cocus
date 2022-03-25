@@ -3,7 +3,7 @@ name: test-desktop-chrome
 on: [push, pull_request]
 
 jobs:
-  ui-test:
+  test-desktop-chrome:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

@@ -3,7 +3,7 @@ name: test-login
 on: [push, pull_request]
 
 jobs:
-  ui-test:
+  test-login:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

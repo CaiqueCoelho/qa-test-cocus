@@ -3,7 +3,7 @@ name: test-login-mobile
 on: [push, pull_request]
 
 jobs:
-  ui-test:
+  test-login-mobile:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

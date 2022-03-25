@@ -3,7 +3,7 @@ name: test-flights
 on: [push, pull_request]
 
 jobs:
-  ui-test:
+  test-flights:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

@@ -3,7 +3,7 @@ name: test-desktop-electron
 on: [push, pull_request]
 
 jobs:
-  ui-test:
+  test-desktop-electron:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
