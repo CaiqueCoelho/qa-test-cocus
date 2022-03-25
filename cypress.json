@@ -10,6 +10,7 @@
   "requestTimeout": 2000,
   "visualRegressionTimeout": 2000,
   "screenshotOnRunFailure": true,
+  "failOnStatusCode": false,
   "screenshotsFolder": "cypress/reporter/screenshots",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
