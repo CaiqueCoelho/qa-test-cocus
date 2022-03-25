@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-25T01:48:44.078Z",
+    "end": "2022-03-25T01:48:58.340Z",
+    "duration": 14262,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3e19b720-a022-492b-94cf-0c5309b71b66",
+      "title": "",
+      "fullFile": "cypress/integration/Login/Login.test.js",
+      "file": "cypress/integration/Login/Login.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02f3aa23-21e6-4346-922a-9938c379dc06",
+          "title": "Desktop Viewport - Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Do login",
+              "fullTitle": "Desktop Viewport - Login Do login",
+              "timedOut": null,
+              "duration": 7983,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/Login.test.js.mp4\"",
+              "code": "cy.checkAccessibility(true);\npage.getCookieButton().click();\npage.getEmailInput().type(Cypress.env('USER_EMAIL'));\npage.getPasswordInput().type(Cypress.env('USER_PASSWORD'));\npage.getLoginButton().click();\npage = new _HomePage.default();\npage.getWelcomeBackMessage().should('exist');",
+              "err": {},
+              "uuid": "482ce553-7ed0-48e9-927a-a4b4c0c46169",
+              "parentUUID": "02f3aa23-21e6-4346-922a-9938c379dc06",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to log in with invalid user",
+              "fullTitle": "Desktop Viewport - Login Try to log in with invalid user",
+              "timedOut": null,
+              "duration": 3745,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/Login.test.js.mp4\"",
+              "code": "page.getEmailInput().type(\"user@phptravels.com\");\npage.getPasswordInput().type(\"demo\");\npage.getLoginButton().click();\npage.getFeedbackErrorInavalidCredential().should('exist');\ncy.checkAccessibility(true);",
+              "err": {},
+              "uuid": "db320733-332a-4453-a8bf-69fd30b2e1b1",
+              "parentUUID": "02f3aa23-21e6-4346-922a-9938c379dc06",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to log in with empty e-mail",
+              "fullTitle": "Desktop Viewport - Login Try to log in with empty e-mail",
+              "timedOut": null,
+              "duration": 2365,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/Login.test.js.mp4\"",
+              "code": "page.getLoginButton().click();\npage.checkIfEmailIsFocused();\ncy.checkAccessibility(true);",
+              "err": {},
+              "uuid": "58e65097-a3b0-4eb4-9778-4536798ea2a3",
+              "parentUUID": "02f3aa23-21e6-4346-922a-9938c379dc06",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "482ce553-7ed0-48e9-927a-a4b4c0c46169",
+            "db320733-332a-4453-a8bf-69fd30b2e1b1",
+            "58e65097-a3b0-4eb4-9778-4536798ea2a3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14093,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
