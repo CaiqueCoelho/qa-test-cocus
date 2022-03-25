@@ -8,7 +8,7 @@
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
     "report:html": "npm run report:merge ; npm run report:generate",
     "report:copyScreenshots": "cp -r cypress/screenshots cypress/results/html/screenshots",
-    "test": "npx cypress run",
+    "test": "npx cypress run --reporter mochawesome",
     "debug": "npx cypress open",
     "build": "docker-compose build",
     "up": "docker-compose up --abort-on-container-exit --exit-code-from e2e",

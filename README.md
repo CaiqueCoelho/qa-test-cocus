@@ -47,7 +47,7 @@ To validate the site's responsiveness, tests were performed in the viewport for 
 4. And run the project with Cypress iterative player with `npm run debug`
 5. After opening the window with the tests, click on the suites to run, one per time, for example by clicking on Contact.test.js and the test will start to run in the Google Chrome browser
 6. Or run the tests headless with `npm run test`
-7. To check the test report in html, access the file in the directory "cypress/report/mochawesome-report" opening the file mochawesome.html, to see the report it is necessary to clone the project and open the html file in the browser or you can check [clicking here](https://caiquecoelho.github.io/qa-test-cocus/mochawesome-report/mochawesome.html)
+7. To check the test report in html, access the file in the directory "cypress/report/mochawesome-report" opening the file mochawesome.html, to see the report it is necessary to clone the project and open the html file in the browser or you can check [clicking here](file:///Users/user/Documents/Projetos/qa-test-cocus/public/index.html)
 8. Cypress also generates a video with the execution of the tests in the directory "cypress/videos" you can see it by cloning the project and accessing the directory or accessing the directory in git itself [click here](https://github.com/CaiqueCoelho/qa-test-cocus/tree/main/cypress/videos)
 
 Or you you can use Docker:
