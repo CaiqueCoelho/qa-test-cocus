@@ -1,7 +1,7 @@
 import { axeConfigDefault, severityIndicators } from './constants';
 
 Cypress.Commands.add('visitHome', () => {
-  cy.visit('/', { failOnStatusCode: false, retryOnStatusCodeFailure: true, });
+  cy.visit('/', {retryOnStatusCodeFailure: true, });
 });
 
 function terminalLog(violations) {

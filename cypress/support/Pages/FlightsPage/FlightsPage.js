@@ -16,7 +16,7 @@ import {
 
 export default class FlightPage {
 
-    visit = () => cy.visit('/flights', { failOnStatusCode: false, retryOnStatusCodeFailure: true, })
+    visit = () => cy.visit('/flights', {retryOnStatusCodeFailure: true, })
 
     getFlyFromInput = () => cy.get(FLY_FROM_INPUT_BY_ID);
 
