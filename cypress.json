@@ -15,6 +15,12 @@
   "reporterOptions": {
     "configFile": "reporter-config.json"
   },
+  "mochawesomeReporterOptions": {
+    "reportDir": "cypress/results/json",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
    "env": {
     "USER_EMAIL": "user@phptravels.com",
     "USER_PASSWORD": "demouser"
