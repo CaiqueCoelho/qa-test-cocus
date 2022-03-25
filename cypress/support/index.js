@@ -14,3 +14,25 @@ Cypress.on("test:after:run", (test, runnable) => {
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
+
+Cypress.on('test:after:run', (test, runnable) => {
+    if (test.state === 'failed') {
+      let item = runnable
+      const nameParts = [runnable.title]
+  
+      while (item.parent) {
+        nameParts.unshift(item.parent.title)
+        item = item.parent
+      }
+  
+      const fullTestName = nameParts
+              .filter(Boolean)
+              .join(' -- ')
+  
+      const imageUrl = `screenshots/${
+        Cypress.spec.name
+      }/${fullTestName} (failed).png`
+  
+      addContext({ test }, imageUrl)
+    }
+})

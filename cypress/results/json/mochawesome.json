@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-25T00:51:33.971Z",
+    "end": "2022-03-25T00:51:47.622Z",
+    "duration": 13651,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "234ca143-ba23-4652-8bcf-12f64b962e97",
+      "title": "",
+      "fullFile": "cypress/integration/Login/LoginMobile.test.js",
+      "file": "cypress/integration/Login/LoginMobile.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2f38e93c-3a7b-4704-b6bb-ebddd4e857e0",
+          "title": "Mobile Viewport - Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Do login with size iphone-6 screen",
+              "fullTitle": "Mobile Viewport - Login Do login with size iphone-6 screen",
+              "timedOut": null,
+              "duration": 4369,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/LoginMobile.test.js.mp4\"",
+              "code": "if (Cypress._.isArray(size)) {\n  cy.viewport(size[0], size[1]);\n} else {\n  if (size != 'iphone-6-landscape') {\n    cy.viewport(size);\n  } else {\n    cy.viewport('iphone-6', 'landscape');\n  }\n}\npage.getCookieButton().click();\npage.getEmailInput().type(Cypress.env('USER_EMAIL'));\npage.getPasswordInput().type(Cypress.env('USER_PASSWORD'));\npage.getLoginButton().click();\npage = new _HomePage.default();\npage.getWelcomeBackMessage().should('exist');",
+              "err": {},
+              "uuid": "eb6f21c4-0d50-4949-bf76-9d82d031c716",
+              "parentUUID": "2f38e93c-3a7b-4704-b6bb-ebddd4e857e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Do login with size samsung-s10 screen",
+              "fullTitle": "Mobile Viewport - Login Do login with size samsung-s10 screen",
+              "timedOut": null,
+              "duration": 3018,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/LoginMobile.test.js.mp4\"",
+              "code": "if (Cypress._.isArray(size)) {\n  cy.viewport(size[0], size[1]);\n} else {\n  if (size != 'iphone-6-landscape') {\n    cy.viewport(size);\n  } else {\n    cy.viewport('iphone-6', 'landscape');\n  }\n}\npage.getCookieButton().click();\npage.getEmailInput().type(Cypress.env('USER_EMAIL'));\npage.getPasswordInput().type(Cypress.env('USER_PASSWORD'));\npage.getLoginButton().click();\npage = new _HomePage.default();\npage.getWelcomeBackMessage().should('exist');",
+              "err": {},
+              "uuid": "223cee8a-8658-45b8-a81e-e4af84a9144d",
+              "parentUUID": "2f38e93c-3a7b-4704-b6bb-ebddd4e857e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Do login with size iphone-6-landscape screen",
+              "fullTitle": "Mobile Viewport - Login Do login with size iphone-6-landscape screen",
+              "timedOut": null,
+              "duration": 3144,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/LoginMobile.test.js.mp4\"",
+              "code": "if (Cypress._.isArray(size)) {\n  cy.viewport(size[0], size[1]);\n} else {\n  if (size != 'iphone-6-landscape') {\n    cy.viewport(size);\n  } else {\n    cy.viewport('iphone-6', 'landscape');\n  }\n}\npage.getCookieButton().click();\npage.getEmailInput().type(Cypress.env('USER_EMAIL'));\npage.getPasswordInput().type(Cypress.env('USER_PASSWORD'));\npage.getLoginButton().click();\npage = new _HomePage.default();\npage.getWelcomeBackMessage().should('exist');",
+              "err": {},
+              "uuid": "d76b5b69-932f-48a4-bd6c-70f9565ed248",
+              "parentUUID": "2f38e93c-3a7b-4704-b6bb-ebddd4e857e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Do login with size ipad-2 screen",
+              "fullTitle": "Mobile Viewport - Login Do login with size ipad-2 screen",
+              "timedOut": null,
+              "duration": 3038,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/Login/LoginMobile.test.js.mp4\"",
+              "code": "if (Cypress._.isArray(size)) {\n  cy.viewport(size[0], size[1]);\n} else {\n  if (size != 'iphone-6-landscape') {\n    cy.viewport(size);\n  } else {\n    cy.viewport('iphone-6', 'landscape');\n  }\n}\npage.getCookieButton().click();\npage.getEmailInput().type(Cypress.env('USER_EMAIL'));\npage.getPasswordInput().type(Cypress.env('USER_PASSWORD'));\npage.getLoginButton().click();\npage = new _HomePage.default();\npage.getWelcomeBackMessage().should('exist');",
+              "err": {},
+              "uuid": "6ca104b6-c88a-494c-9a7d-d4952634f961",
+              "parentUUID": "2f38e93c-3a7b-4704-b6bb-ebddd4e857e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eb6f21c4-0d50-4949-bf76-9d82d031c716",
+            "223cee8a-8658-45b8-a81e-e4af84a9144d",
+            "d76b5b69-932f-48a4-bd6c-70f9565ed248",
+            "6ca104b6-c88a-494c-9a7d-d4952634f961"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13569,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

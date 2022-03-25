@@ -6,8 +6,9 @@ Welcome to my test! <img src="https://github.com/CaiqueCoelho/CaiqueCoelho/blob/
 
 ###### 1.1 - Cypress
 
-For web automation I chose Cypress in this case, writing the automation in javascript. The option for Cypress was made thinking about the best practices and most modern tool available on the market today, with the possibility of surveying flaky tests, integration with plugins for visual regression tests, accessibility and others. with Cypress we also have the facility to mock API responses if you want to test just a subset of APIs or just do a front-end integration test. For the automation of these tests, no mock was used.
+For web automation I chose Cypress in this case, writing the automation in javascript. The option for Cypress was made thinking about the best practices and most modern tool available on the market today, with the possibility of surveying flaky tests, integration with plugins for visual regression tests like Percy, accessibility like AXE and others. with Cypress we also have the facility to mock API responses if you want to test just a subset of APIs or just do a front-end integration test. For the automation of these tests, no mock was used.
 
+So using Cypress I was able to develop tests to check for accessibility issues, check responsive page in mobile sizes, generate report with html page, screenshoots and videos and also implementing a CI solution using Github Action to run parallel tests and hosting report html in Github Page.
 ###### 1.2 Automation structure
 
 To facilitate the organization and follow good clean code practices, I chose to structure the automation using Page Objects.
@@ -76,6 +77,3 @@ For this test I implemented the Github Action (GHA) creating 5 workflows that wi
 
 Regarding cross browser testing, Cypress is compatible with Chrome, Firefox and Electron, for the test I chose to create the flows for Chrome and Electron.
 You can check all GHA workflows jobs running [here](https://github.com/CaiqueCoelho/qa-test-cocus/actions) 
-
-### TODO
-ATUALIZAR README EXPLICANDO PQ ESCOLHI CYPRESS E ATUALIZAR LINKS DOS VIDEOS E REPORTS E IMAGENS

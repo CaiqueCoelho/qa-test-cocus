@@ -3,7 +3,7 @@ import HomePage from '../../support/Pages/HomePage/HomePage';
 
 const sizes = ['iphone-6', 'samsung-s10', 'iphone-6-landscape', 'ipad-2']
 
-describe('Desktop Viewport - Login', () => {
+describe('Mobile Viewport - Login', () => {
     let page;
   
     Cypress.config('scrollBehavior', "center");

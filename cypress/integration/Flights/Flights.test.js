@@ -30,7 +30,7 @@ describe('Desktop Viewport - Flights', () => {
     })
   })
 
-  it.only('Search One Way for 1 Adult', function() {
+  it('Search One Way for 1 Adult', function() {
     cy.checkAccessibility(true);
     page.getFlyFromInput().type(CITY_FROM, {scrollBehavior:false});
     page.getFlyOption().click({scrollBehavior:false});
